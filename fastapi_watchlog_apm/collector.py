@@ -67,3 +67,15 @@ def flush():
 
     _grouped.clear()
     return results
+
+
+def collect_request(service, path, method, status_code, duration, memory):
+    record({
+        "type": "request",
+        "service": service,
+        "path": path,
+        "method": method,
+        "statusCode": status_code,
+        "duration": duration,
+        "memory": memory,
+    })

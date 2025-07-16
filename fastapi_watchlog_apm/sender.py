@@ -52,7 +52,7 @@ def _send(metrics):
 
     payload = {
         "collected_at": time.strftime("%Y-%m-%dT%H:%M:%S"),
-        "platformName": "flask",
+        "platformName": "FastApi",
         "metrics": metrics,
     }
 
